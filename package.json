@@ -30,5 +30,8 @@
         "passport-local": "^1.0.0",
         "serve-favicon": "^2.5.0",
         "stripe": "^8.174.0"
+    },
+    "engines": {
+        "node": "v15.6.0"
     }
 }
