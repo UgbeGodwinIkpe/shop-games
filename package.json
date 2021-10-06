@@ -7,6 +7,9 @@
         "start": "app.js",
         "Dev": "nodemon app.js"
     },
+    "keywords": [
+        "heroku"
+    ],
     "author": "Godwin",
     "license": "ISC",
     "dependencies": {
