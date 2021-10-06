@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressHBs = require('express-handlebars');
+const dotenv = require('dotenv');
 const Handlebars = require('handlebars');
 const mongoose = require('mongoose');
 const session = require('express-session');
