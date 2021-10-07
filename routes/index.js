@@ -10,14 +10,14 @@ const Order = require('../models/order');
 
 // Getting home hape
 router.get('/', (req, res, next) => {
-    const successMsg = req.flash('success')[0];
+    const successMsg = req.flash('success', 'Welcome to Games shop')[0];
     Product.find((err, docs) => {
         var productChunks = [];
         const chunkSize = 3;
         for (var i = 0; i < docs.length; i += chunkSize) {
             productChunks.push(docs.slice(i, i + chunkSize));
         }
-        res.render('shop/index', { title: 'Shopping Cart', products: productChunks, successMsg: successMsg, noMessage: !successMsg });
+        res.render('shop/index', { title: 'Shopping Cart', products: productChunks, successMsg: req.flash('success'), noMessage: !successMsg });
     });
 });
 router.get('/user/signup', (req, res, next) => {
