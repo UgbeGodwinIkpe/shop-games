@@ -67,4 +67,4 @@ const port = process.env.PORT || 4000;
 app.listen(port, (err, res) => {
     if (err) throw err;
     console.log("App running of port " + port);
-})
+});
