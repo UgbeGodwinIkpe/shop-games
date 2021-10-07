@@ -32,7 +32,6 @@
         "nodemon": "^2.0.12",
         "passport": "^0.4.1",
         "passport-local": "^1.0.0",
-        "serve-favicon": "^2.5.0",
         "stripe": "^8.174.0"
     },
     "engines": {

@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -30,8 +29,6 @@ app.engine('.hbs', expressHBs({ handlebars: allowInsecurePrototypeAccess(Handleb
 // app.engine('.hbs', expressHBs({ defaultLayout: 'layout', extname: '.hbs' }))
 app.set('view engine', 'hbs');
 
-// unconnent after placing your favicon in /public
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static('./public'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -57,13 +54,13 @@ app.use((req, res, next) => {
     res.locals.session = req.session;
     next();
 });
-app.use('/', routes);
+app.use(routes);
 // app.use('/users', users);
 
 // catch 404 and forward to error handle
-app.use(function(req, res, next) {
+// app.use(function(req, res, next) {
 
-})
+// })
 
 const port = process.env.PORT || 4000;
 
